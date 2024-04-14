@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="idn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple E-commerce Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+        
+        header h1 {
+            margin: 0;
+        }
+        
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        
+        nav ul li {
+            display: inline-flex;
+            margin-right: 10px;
+        }
+        
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+        
+        main {
+            padding: 20px;
+        }
+        
+        .product {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+        
+        aside {
+            margin: auto;
+            width: 30%;
+            padding: 20px;
+        }
+        
+        #cart {
+            background-color: #f2f2f2;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        
+        #emptyCartButton {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            background-color: #ff0000;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        /* Responsive Styling */
+        @media only screen and (max-width: 600px) {
+            #emptyCartButton {
+                font-size: 14px; /* Adjust font size for smaller screens */
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome To Alpa Shoes.store</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Beranda</a></li>
+                <li><a href="#">Produk</a></li>
+                <li><a href="#">Keranjang</a></li>
+                <li><a href="#">Kontak</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <div class="product">
+            <h2>sepatu piero street nero</h2>
+            <p>Harga: Rp.434.840</p>
+            <img src="street nero piero.jfif" alt="Sepatu Piero Street Nero">
+            <button class="addToCartButton" onclick="addToCart('Sepatu Piero Street Nero', 'Rp.434.840')">Tambahkan ke Keranjang</button>
+            <a href="https://shp.ee/0onzs4c" class="buy-button">Beli</a>
+        </div>
+        <div class="product">
+            <h2>sepatu piero sneakers joggers</h2>
+            <p>Harga: Rp.117.000</p>
+            <img src="jogger.jpeg" alt="Sepatu Piero Sneakers Joggers">
+            <button class="addToCartButton" onclick="addToCart('Sepatu Piero Sneakers Joggers', 'Rp.117.000')">Tambahkan ke Keranjang</button>
+            <a href="https://id.shp.ee/CJygxAy" class="buy-button">Beli</a>
+        </div>
+    </main>
+
+    <aside>
+        <div id="cart">
+            <h2>Keranjang</h2>
+            <div id="cartContent"></div>
+            <button id="emptyCartButton" onclick="emptyCart()">Kosongkan Keranjang</button>
+        </div>
+    </aside>
+
+    <footer>
+        <p>Hak Cipta &copy; 2024 ALDI ALPAISAL</p>
+    </footer>
+
+    <script>
+        function addToCart(productName, price) {
+            var cartContent = document.getElementById("cartContent");
+            var newItem = document.createElement("div");
+            newItem.textContent = productName + " - " + price;
+            cartContent.appendChild(newItem);
+            alert('Product ' + productName + ' has been added to the cart.');
+        }
+
+        function emptyCart() {
+            var cartContent = document.getElementById("cartContent");
+            cartContent.innerHTML = ""; // Clear the content of the cart
+            alert('Keranjang telah dikosongkan.');
+        }
+    </script>
+<main>
+    <!-- Product section -->
+    <div class="product">
+        <!-- Product details -->
+    </div>
+    <div class="product">
+        <!-- Product details -->
+    </div>
+
+    <!-- About Us section -->
+    <section id="about">
+        <h2>Tentang Kami</h2>
+        <p>Selamat datang di Alpa Shoes.store! Kami adalah destinasi utama Anda untuk semua kebutuhan sepatu terbaru dan terkini. Dengan komitmen kami untuk menyediakan produk berkualitas tinggi dan layanan pelanggan yang luar biasa, kami bangga menjadi mitra perjalanan sepatu Anda.</p>
+
+        <p>Di Toko Sepatu Kami, kami memahami bahwa setiap langkah Anda membutuhkan kenyamanan dan gaya yang sesuai. Itulah mengapa kami menyajikan berbagai macam sepatu dari merek terkemuka di industri fashion. Mulai dari sepatu olahraga yang andal hingga sepatu formal yang elegan, kami memiliki pilihan yang sesuai dengan selera dan kebutuhan Anda.</p>
+
+        <p>Kami tidak hanya menawarkan produk berkualitas tinggi, tetapi juga pengalaman belanja yang menyenangkan. Tim kami selalu siap membantu Anda dalam menemukan sepatu yang sempurna untuk setiap kesempatan. Dengan pengetahuan dan keahlian yang kami miliki, kami berkomitmen untuk memberikan saran yang sesuai dengan gaya dan preferensi Anda.</p>
+
+        <p>Selain itu, kepuasan pelanggan adalah prioritas utama kami. Kami selalu berusaha untuk memberikan layanan pelanggan yang ramah, responsif, dan profesional. Kami menghargai setiap pelanggan dan berkomitmen untuk menjaga hubungan jangka panjang dengan Anda.</p>
+
+        <p>Terima kasih telah memilih Toko Kami sebagai mitra perjalanan mode Anda. Kami berharap dapat memberikan pengalaman belanja yang memuaskan dan memenuhi semua.</p>
+    </section>
+</main>
+<section id="contact">
+    <h2>Kontak Kami</h2>
+    <p>Jika Anda memiliki pertanyaan atau memerlukan bantuan, jangan ragu untuk menghubungi kami melalui:</p>
+    <ul>
+        <li>Email: <a href="mailto:info@alpashoes.store">info@alpashoes.store</a></li>
+        <li>Telepon: <a href="tel:https://wa.me/qr/CNRAPKNCIPO6M1"></a>085659881259</li>
+        <li>Alamat: Jalan raya lembang No. 11, Kota bandung</li>
+        <li>Instagram: <a href="https://www.instagram.com/aldi_alpaisal?igsh=ZGFvcWlxdXgzMGFu">@aldi_alpaisal</a></li>
+    </ul>
+</section>
+
+

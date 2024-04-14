@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="idn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Commerce Sederhana</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+        /* Style tambahan untuk keranjang belanja */
+        .btnKeranjang {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body class="bg-secondary">
+    <div>
+        <!-- Menu -->
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">Alphatar shoes.id/a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="Beranda">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="" href="#Beranda">Beranda</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#Produk">Produk</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#Keranjang">Keranjang</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#Kontak">Contact</a>
+                  </li>
+            <div id="carouselExample" class="carousel slide">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="arrangement-delicious-oriental-food.jpg" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="variation-thai-cuisine-with-bell-peppers-bokchoy-wooden-desk-against-black-background.jpg" class="d-block w-100" alt="...">
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+        </div>
+          </nav>
+       
+
+        <!-- catalog -->
+        <h3 class="text-center" id="Produk">Produk</h3>
+        <ul class="row row-cols-md-2 gx-5 p-5">
+            <div class="col mb-5">
+                <div class="card shadow">
+                    <img src="piero street hijau.jfif" class="card-img-top">
+                    <div class="card-body">
+                      <p class="card-text text-center">sepatu piero street</p>
+                    </div>
+                    <div class="card-footer d-md-flex">
+                        <a class="btn btn-sm btn-primary d-block btnBeli" onclick="beliProduk1()">Beli</a>
+                        <a class="btn btn-sm btn-secondary d-block btnKeranjang" onclick="tambahKeKeranjang(1)">Keranjang</a>
+                        <span class="ms-auto text-danger fw-bold d-block text-center harga">Rp. 50.000</span>
+                    </div>
+                  </div>
+            </div>
+            <div class="col mb-5">
+                <div class="card shadow">
+                    <img src="sepatu jogger.jpeg" class="card-img-top">
+                    <div class="card-body">
+                    </div>
+                    <div class="card-footer d-md-flex">
+                        <a class="btn btn-sm btn-primary d-block btnBeli" onclick="beliProduk2()">Beli</a>
+                        <a class="btn btn-sm btn-secondary d-block btnKeranjang" onclick="tambahKeKeranjang(2)">Keranjang</a>
+                        <span class="ms-auto text-danger fw-bold d-block text-center harga">Rp. 58.000</span>
+                    </div>
+                  </div>
+            </div>
+        </ul>
+
+                <!-- Keranjang -->
+                <div id="Keranjang" class="px-4 py-4">
+                    <h3 class="text-center">Keranjang Belanja</h3>
+                    <ul id="listKeranjang" class="list-group">
+                    </ul>
+                    <div id="totalHarga" class="text-center mt-3"></div>
+                    <div class="text-center mt-3">
+                        <button class="btn btn-danger" onclick="kosongkanKeranjang()">Kosongkan Keranjang</button>
+                        <button class="btn btn-success" onclick="beliProduk()">Beli</button>
+                    </div>
+                </div>
+        
+                <!-- Tentang Kami -->
+                <div class="px-4 py-4 bg-secondary text-center">
+                    <div class="mx-auto w-75"></div>
+                    <h3 class="text-white"> Tentang Kami</h3>
+                    <p class="text-center text-white"> Selamat datang di Toko Sepatu Kami! Kami adalah destinasi utama Anda untuk semua kebutuhan sepatu terbaru dan terkini. Dengan komitmen kami untuk menyediakan produk berkualitas tinggi dan layanan pelanggan yang luar biasa, kami bangga menjadi mitra perjalanan sepatu Anda.
+
+                        Di Toko Sepatu Kami, kami memahami bahwa setiap langkah Anda membutuhkan kenyamanan dan gaya yang sesuai. Itulah mengapa kami menyajikan berbagai macam sepatu dari merek terkemuka di industri fashion. Mulai dari sepatu olahraga yang andal hingga sepatu formal yang elegan, kami memiliki pilihan yang sesuai dengan selera dan kebutuhan Anda.</p>
+                    <p class="text-center text-white"> Kami tidak hanya menawarkan produk berkualitas tinggi, tetapi juga pengalaman belanja yang menyenangkan. Tim kami selalu siap membantu Anda dalam menemukan sepatu yang sempurna untuk setiap kesempatan. Dengan pengetahuan dan keahlian yang kami miliki, kami berkomitmen untuk memberikan saran yang sesuai dengan gaya dan preferensi Anda.
+
+                        Selain itu, kepuasan pelanggan adalah prioritas utama kami. Kami selalu berusaha untuk memberikan layanan pelanggan yang ramah, responsif, dan profesional. Kami menghargai setiap pelanggan dan berkomitmen untuk menjaga hubungan jangka panjang dengan Anda.
+                        
+                        Terima kasih telah memilih Toko Sepatu Kami sebagai mitra perjalanan mode Anda. Kami berharap dapat memberikan pengalaman belanja yang memuaskan dan memenuhi semua harapan Anda. Jika Anda memiliki pertanyaan atau membutuhkan bantuan, jangan ragu untuk menghubungi kami. Kami siap membantu Anda dengan senang hati.</p>
+                </div>
+        
+
+                 <!-- Kontak -->
+        <div id="Kontak" class="px-4 py-4 bg-secondary text-center">
+            <div class="mx-auto w-75"></div>
+            <h3 class="text-white">Kontak Kami</h3>
+            <!-- Tautan Kontak Kami -->
+            <p class="text-center text-white">Silakan hubungi kami melalui nomor <a href="https://wa.me/qr/CNRAPKNCIPO6M1></a>@085659881259</p>
+
+            <!-- Tautan Instagram -->
+            <p class="text-center text-white">Ikuti kami di Instagram: <a href="https://www.instagram.com/aldi_alpaisal?igsh=ZGFvcWlxdXgzMGFu">@aldi_alpaisal</a></p>
+
+            <!-- copyright -->
+            <div class="text-center text-white border-top ">&copy; 2024 - Aldi alpaisal</div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script>
+        var keranjang = [];
+
+        function tambahKeKeranjang(id) {
+            var produk;
+            if (id === 1) {
+                produk = { nama: "piero street nero", harga: 439.840 };
+            } else if (id === 2) {
+                produk = { nama: "piero jogger", harga: 180.000 };
+            } 
+
+            keranjang.push(produk);
+            tampilkanKeranjang();
+        }
+
+        function tampilkanKeranjang() {
+            var listKeranjang = document.getElementById("listKeranjang");
+            var totalHarga = 0;
+            listKeranjang.innerHTML = "";
+            keranjang.forEach(function(produk) {
+                var listItem = document.createElement("li");
+                listItem.className = "list-group-item";
+                listItem.textContent = produk.nama + " - Rp. " + produk.harga.toLocaleString();
+                listKeranjang.appendChild(listItem);
+                totalHarga += produk.harga;
+            });
+            var totalHargaElement = document.getElementById("totalHarga");
+            totalHargaElement.textContent = "Total Harga: Rp. " + totalHarga.toLocaleString();
+        }
+
+        function kosongkanKeranjang() {
+            keranjang = [];
+            tampilkanKeranjang();
+        }
+
+        function beliSemuaProduk() {
+            // Ganti nomor WhatsApp dengan nomor toko Anda
+            var nomorWhatsApp = "6285659881259";
+            var pesan = "Halo, saya ingin membeli produk: ";
+            keranjang.forEach(function(produk) {
+                pesan += produk.nama + ", ";
+            });
+            pesan += ". Terima kasih!";
+            var urlWhatsApp = "https://wa.me/qr/CNRAPKNCIPO6M1" + nomorWhatsApp + "?text=" + encodeURIComponent(pesan);
+            window.open(urlWhatsApp, "_blank");
+        }
+
+        function beliProduk1() {
+            // situs web lain
+            var urlProduk = "https://shp.ee/0onzs4c";
+            // Buka halaman produk di situs web lain
+            window.open(urlProduk, "_blank");
+        }
+        function beliProduk2() {
+            // situs web lain
+            var urlProduk = "https://id.shp.ee/CJygxAy";
+            // Buka halaman produk di situs web lain
+            window.open(urlProduk, "_blank");
+        }
+    </script>
+</body>
+</html>
